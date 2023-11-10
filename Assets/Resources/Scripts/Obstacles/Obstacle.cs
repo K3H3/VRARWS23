@@ -25,9 +25,11 @@ public abstract class Obstacle : MonoBehaviour
         Act();
     }
 
+    #if UNITY_EDITOR
     public void OnDrawGizmos()
     {
         Gizmos.color = gizmoColor;
         Visualize();
     }
+    #endif
 }

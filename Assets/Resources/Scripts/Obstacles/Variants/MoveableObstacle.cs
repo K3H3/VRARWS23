@@ -1,6 +1,10 @@
 using System.Linq;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 /// <summary>
 /// Controls a moving obstacle that follows a path defined by waypoints.
 /// The obstacle loops back to the start when the end of the path is reached.
@@ -38,19 +42,24 @@ public class MoveableObstacle : Obstacle
             }
         }
     }
+    
 
     public override void Visualize()
     {
+        #if UNITY_EDITOR
         waypoints = GetComponentsInChildren<Transform>().Where(t => t != transform).ToArray();
 
         if (waypoints.Length > 1)
         {
             DrawPath();
         }
+        #endif
     }
+
 
     void DrawPath()
     {
+        #if UNITY_EDITOR
         for (int i = 1; i <= waypoints.Length; i++)
         {
             Transform startPoint = waypoints[i - 1];
@@ -60,7 +69,7 @@ public class MoveableObstacle : Obstacle
             Gizmos.DrawLine(startPoint.position, endPoint.position);
 
             // Draw the waypoint index text.
-            UnityEditor.Handles.Label(startPoint.position, "Waypoint " + (i));
+            Handles.Label(startPoint.position, "Waypoint " + (i));
 
             // Draw an arrow in the middle of the segment.
             Vector3 direction = (endPoint.position - startPoint.position).normalized;
@@ -76,10 +85,12 @@ public class MoveableObstacle : Obstacle
             Vector3 direction = (waypoints[0].position - waypoints[waypoints.Length - 1].position).normalized;
             DrawArrow(waypoints[waypoints.Length - 1].position + direction * (Vector3.Distance(waypoints[waypoints.Length - 1].position, waypoints[0].position) / 2), direction);
         }
+        #endif
     }
 
     private void DrawArrow(Vector3 position, Vector3 direction)
     {
+        #if UNITY_EDITOR
         // Adjust these values to change the size and shape of the arrowheads.
         float arrowHeadLength = 0.25f;
         float arrowHeadAngle = 20.0f;
@@ -88,5 +99,7 @@ public class MoveableObstacle : Obstacle
         Vector3 left = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 - arrowHeadAngle, 0) * new Vector3(0, 0, 1);
         Gizmos.DrawRay(position, right * arrowHeadLength);
         Gizmos.DrawRay(position, left * arrowHeadLength);
+        #endif
     }
+
 }

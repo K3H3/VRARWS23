@@ -1,5 +1,9 @@
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 /// <summary>
 /// Controls a spinning obstacle that spins clock or counterclockwise.
 /// </summary>
@@ -22,8 +26,10 @@ public class SpinnableObstacle : Obstacle
         obstacle.transform.Rotate(Vector3.up, speed * direction * Time.deltaTime);
     }
 
+
     public override void Visualize()
     {
+        #if UNITY_EDITOR
         float radius = 1f; 
         Vector3 rotationDirection = clockwise ? Vector3.forward : Vector3.back;
         Vector3 arrowPosition1 = transform.position + (transform.right * radius);
@@ -32,10 +38,12 @@ public class SpinnableObstacle : Obstacle
         Gizmos.DrawWireSphere(transform.position, radius);
         DrawArrow(arrowPosition1, rotationDirection);
         DrawArrow(arrowPosition2, -rotationDirection);
+        #endif
     }
 
     private void DrawArrow(Vector3 position, Vector3 direction)
     {
+        #if UNITY_EDITOR
         float arrowHeadLength = 0.25f;
         float arrowHeadAngle = 20.0f;
 
@@ -49,5 +57,7 @@ public class SpinnableObstacle : Obstacle
         // Draw the right and left parts of the arrowhead
         Gizmos.DrawRay(position + direction * 0.5f, right * arrowHeadLength);
         Gizmos.DrawRay(position + direction * 0.5f, left * arrowHeadLength);
+        #endif
     }
+
 }
