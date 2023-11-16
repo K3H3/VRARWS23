@@ -204,7 +204,7 @@ MonoBehaviour:
   - {fileID: -642682143737874763}
   - {fileID: -5485069616892487261}
   - {fileID: 1793126696005431918}
-  m_renderMode: 1
+  m_renderMode: 0
   m_depthSubmissionMode: 0
 --- !u!114 &-4758259415424795327
 MonoBehaviour:
@@ -256,7 +256,7 @@ MonoBehaviour:
   - {fileID: -7964941505610985748}
   - {fileID: -8841168108128163556}
   - {fileID: -3455157241553329009}
-  m_renderMode: 1
+  m_renderMode: 0
   m_depthSubmissionMode: 0
 --- !u!114 &-4274509376918565335
 MonoBehaviour:
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef793c31862a37448e907829482ef80, type: 3}
   m_Name: OculusQuestFeature Android
   m_EditorClassIdentifier: 
-  m_enabled: 1
+  m_enabled: 0
   nameUi: Oculus Quest Support
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.oculusquest
