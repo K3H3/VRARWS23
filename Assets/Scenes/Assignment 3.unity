@@ -1645,6 +1645,11 @@ MonoBehaviour:
   gizmoColor: {r: 0.9952626, g: 0, b: 1, a: 1}
   speed: 250
   clockwise: 1
+--- !u!4 &1468311304 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7392379453017569788, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+  m_PrefabInstance: {fileID: 1986022991966669211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513993906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2424,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6617451663966028751, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+      propertyPath: targetPosition
+      value: 
+      objectReference: {fileID: 1468311304}
     - target: {fileID: 9146974285355630436, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
       propertyPath: m_Name
       value: '[XR SETUP]'
