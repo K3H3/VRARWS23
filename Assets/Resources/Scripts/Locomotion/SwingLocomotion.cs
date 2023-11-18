@@ -2,56 +2,53 @@ using UnityEngine;
 
 public class SwingLocomotion : MonoBehaviour
 {
-    // Game Objects
-    [SerializeField] private GameObject LeftHand;
-    [SerializeField] private GameObject RightHand;
-    [SerializeField] private GameObject MainCamera;
-    [SerializeField] private GameObject ForwardDirection;
-
-    //Vector3 Positions
-    [SerializeField] private Vector3 PositionPreviousFrameLeftHand;
-    [SerializeField] private Vector3 PositionPreviousFrameRightHand;
-    [SerializeField] private Vector3 PlayerPositionPreviousFrame;
-    [SerializeField] private Vector3 PlayerPositionCurrentFrame;
-    [SerializeField] private Vector3 PositionCurrentFrameLeftHand;
-    [SerializeField] private Vector3 PositionCurrentFrameRightHand;
-
-    //Speed
-    [SerializeField] private float Speed = 70;
-    [SerializeField] private float HandSpeed;
+    [SerializeField] private GameObject leftHand, rightHand, mainCamera, forwardDirection;
+    private Vector3 prevPosLeftHand, prevPosRightHand, prevPlayerPos;
+    private float speed = 70f;
 
     void Start()
     {
-        PlayerPositionPreviousFrame = transform.position;
-        PositionPreviousFrameLeftHand = LeftHand.transform.position;
-        PositionPreviousFrameRightHand = RightHand.transform.position;
+        prevPlayerPos = transform.position;
+        prevPosLeftHand = leftHand.transform.position;
+        prevPosRightHand = rightHand.transform.position;
     }
 
     void Update()
     {
-        // get forward direction from the center eye camera and set it to the forward direction object
-        float yRotation = MainCamera.transform.eulerAngles.y;
-        ForwardDirection.transform.eulerAngles = new Vector3(0, yRotation, 0);
+        UpdateForwardDirection();
+        Vector3 currentPosLeftHand = leftHand.transform.position;
+        Vector3 currentPosRightHand = rightHand.transform.position;
+        Vector3 currentPlayerPos = transform.position;
 
-        PositionCurrentFrameLeftHand = LeftHand.transform.position;
-        PositionCurrentFrameRightHand = RightHand.transform.position;
-
-        PlayerPositionCurrentFrame = transform.position;
-
-        var playerDistanceMoved = Vector3.Distance(PlayerPositionCurrentFrame, PlayerPositionPreviousFrame);
-        var leftHandDistanceMoved = Vector3.Distance(PositionPreviousFrameLeftHand, PositionCurrentFrameLeftHand);
-        var rightHandDistanceMoved = Vector3.Distance(PositionPreviousFrameRightHand, PositionCurrentFrameRightHand);
-
-        HandSpeed = ((leftHandDistanceMoved - playerDistanceMoved) + (rightHandDistanceMoved - playerDistanceMoved));
+        float handSpeed = CalculateHandSpeed(currentPlayerPos, currentPosLeftHand, currentPosRightHand);
 
         if (Time.timeSinceLevelLoad > 1f)
         {
-            transform.position += ForwardDirection.transform.forward * HandSpeed * Speed * Time.deltaTime;
+            transform.position += forwardDirection.transform.forward * handSpeed * speed * Time.deltaTime;
         }
 
-        PositionPreviousFrameLeftHand = PositionCurrentFrameLeftHand;
-        PositionPreviousFrameRightHand = PositionCurrentFrameRightHand;
+        UpdatePreviousPositions(currentPosLeftHand, currentPosRightHand, currentPlayerPos);
+    }
 
-        PlayerPositionPreviousFrame = PlayerPositionCurrentFrame;
+    private void UpdateForwardDirection()
+    {
+        float yRotation = mainCamera.transform.eulerAngles.y;
+        forwardDirection.transform.eulerAngles = new Vector3(0, yRotation, 0);
+    }
+
+    private float CalculateHandSpeed(Vector3 currentPlayerPos, Vector3 currentPosLeftHand, Vector3 currentPosRightHand)
+    {
+        float playerDistanceMoved = Vector3.Distance(currentPlayerPos, prevPlayerPos);
+        float leftHandDistanceMoved = Vector3.Distance(prevPosLeftHand, currentPosLeftHand);
+        float rightHandDistanceMoved = Vector3.Distance(prevPosRightHand, currentPosRightHand);
+
+        return ((leftHandDistanceMoved - playerDistanceMoved) + (rightHandDistanceMoved - playerDistanceMoved));
+    }
+
+    private void UpdatePreviousPositions(Vector3 currentPosLeftHand, Vector3 currentPosRightHand, Vector3 currentPlayerPos)
+    {
+        prevPosLeftHand = currentPosLeftHand;
+        prevPosRightHand = currentPosRightHand;
+        prevPlayerPos = currentPlayerPos;
     }
 }
