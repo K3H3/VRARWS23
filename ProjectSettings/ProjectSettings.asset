@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: VRARWS23
-  productName: VRARWS23
+  companyName: VRARWS23-PROJ
+  productName: VRARWS23-PROJ
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -136,9 +136,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: -4966067364503779010, guid: 0e624886b9a304d21a0ca8a30b95dece, type: 2}
-  - {fileID: -2339033611045863048, guid: f26354da9a41f4a76a0f1dfa1c232a11, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -158,7 +156,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.VRARWS23.VRARWS23
+    Android: com.VRARWS23PROJ.VRARWS23PROJ
     Standalone: com.VRARWS23.VRARWS23
   buildNumber:
     Standalone: 0
