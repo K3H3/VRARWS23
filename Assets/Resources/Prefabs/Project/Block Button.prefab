@@ -703,7 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocks:
   - {fileID: 449328661439270870, guid: 1ea5889e29e744c739a9dc0a1ab59d3a, type: 3}
-  - {fileID: 6575017362825535094, guid: d19f4414d1fa64682aa8d9c4010daddc, type: 3}
+  - {fileID: 6575017362825535094, guid: 863438ff220d44cfba299bff219a1bbb, type: 3}
   target: {fileID: 1250471806920898432}
   minScale: 0.1
   maxScale: 0.25

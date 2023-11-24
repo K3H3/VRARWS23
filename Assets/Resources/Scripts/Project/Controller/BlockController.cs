@@ -1,6 +1,4 @@
-using ExitGames.Client.Photon.StructWrapping;
 using Photon.Pun;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BlockController : MonoBehaviour
@@ -33,6 +31,6 @@ public class BlockController : MonoBehaviour
 
         Vector3 randomScaleV3 = new Vector3(randomScaleX, randomScaleY, randomScaleZ);
 
-        spawnedObject.GetComponent<ObjectModifier>().ApplyModifiers(randomColor, randomScaleV3);
+        spawnedObject.GetComponent<ObjectModifier>().ApplyModifiers(randomScaleV3);
     }
 }
