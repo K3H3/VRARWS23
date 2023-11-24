@@ -1,12 +1,9 @@
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class OwnershipTransfer : MonoBehaviourPun, IPunOwnershipCallbacks
 {
-    private InputDevice targetDevice;
-
     private void Awake()
     {
         PhotonNetwork.AddCallbackTarget(this);
@@ -17,23 +14,16 @@ public class OwnershipTransfer : MonoBehaviourPun, IPunOwnershipCallbacks
         PhotonNetwork.RemoveCallbackTarget(this);
     }
 
-    private void Update()
-    {
-        if (targetDevice.TryGetFeatureValue(CommonUsages.triggerButton,
-                out var triggerValue))
-        {
-            if (triggerValue)
-                photonView.RequestOwnership();
-        }
-    }
-
     public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer)
     {
+        Debug.Log("Transferring Ownership...");
+
         if (targetView != photonView)
         {
             return;
         }
 
+       
         photonView.TransferOwnership(requestingPlayer);
     }
 
@@ -43,6 +33,7 @@ public class OwnershipTransfer : MonoBehaviourPun, IPunOwnershipCallbacks
         {
             return;
         }
+        Debug.Log("Ownership Transfered Successfully");
     }
 
     public void OnOwnershipTransferFailed(PhotonView targetView, Player senderOfFailedRequest)
