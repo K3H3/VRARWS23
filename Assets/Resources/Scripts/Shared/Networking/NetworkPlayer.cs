@@ -34,12 +34,14 @@ public class NetworkPlayer : MonoBehaviour
 
     void Update()
     {
-        if (photonView.IsMine)
+        if (!photonView.IsMine)
         {
-            MapPosition(head, headRig);
-            MapPosition(leftHand, leftHandRig);
-            MapPosition(rightHand, rightHandRig);
+            return;
         }
+
+        MapPosition(head, headRig);
+        MapPosition(leftHand, leftHandRig);
+        MapPosition(rightHand, rightHandRig);
     }
 
 

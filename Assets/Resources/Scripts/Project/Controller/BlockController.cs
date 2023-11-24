@@ -23,14 +23,11 @@ public class BlockController : MonoBehaviour
 
         GameObject spawnedObject = PhotonNetwork.Instantiate(selectedPrefab.name, target.position, Quaternion.identity);
 
-        Color randomColor = new Color(Random.value, Random.value, Random.value);
-
         float randomScaleX = Random.Range(minScale, maxScale);
         float randomScaleY = Random.Range(minScale, maxScale);
         float randomScaleZ = Random.Range(minScale, maxScale);
+        Vector3 randomScale = new Vector3(randomScaleX, randomScaleY, randomScaleZ);
 
-        Vector3 randomScaleV3 = new Vector3(randomScaleX, randomScaleY, randomScaleZ);
-
-        spawnedObject.GetComponent<ObjectModifier>().ApplyModifiers(randomScaleV3);
+        spawnedObject.GetComponent<ObjectModifier>().ApplyModifiers(randomScale);
     }
 }

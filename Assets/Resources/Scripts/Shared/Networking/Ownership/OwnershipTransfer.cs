@@ -16,8 +16,6 @@ public class OwnershipTransfer : MonoBehaviourPun, IPunOwnershipCallbacks
 
     public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer)
     {
-        Debug.Log("Transferring Ownership...");
-
         if (targetView != photonView)
         {
             return;
@@ -33,7 +31,6 @@ public class OwnershipTransfer : MonoBehaviourPun, IPunOwnershipCallbacks
         {
             return;
         }
-        Debug.Log("Ownership Transfered Successfully");
     }
 
     public void OnOwnershipTransferFailed(PhotonView targetView, Player senderOfFailedRequest)

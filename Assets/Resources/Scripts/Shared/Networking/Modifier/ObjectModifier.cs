@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class ObjectModifier : MonoBehaviourPunCallbacks
 {
-    public void ApplyModifiers(Vector3 randomScaleV3)
+    public void ApplyModifiers(Vector3 scale)
     {
-        photonView.RPC("ApplyScale", RpcTarget.All, randomScaleV3);
+        photonView.RPC("ApplyScale", RpcTarget.All, scale);
     }
 
     [PunRPC]
