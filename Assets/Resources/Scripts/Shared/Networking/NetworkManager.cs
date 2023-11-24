@@ -1,3 +1,4 @@
+using ExitGames.Client.Photon;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
@@ -6,7 +7,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 {
     void Start()
     {
+        RegisterTypes();
         ConnectToServer();
+    }
+
+    private void RegisterTypes()
+    {
+        PhotonPeer.RegisterType(typeof(Color), (byte)'C', ColorType.Serialize, ColorType.Deserialize);
     }
 
     void ConnectToServer()

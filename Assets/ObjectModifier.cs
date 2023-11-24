@@ -8,8 +8,7 @@ public class ObjectModifier : MonoBehaviourPunCallbacks
 
     public void ApplyModifiers(Color randomColor, Vector3 randomScaleV3)
     {
-        photonView.RPC("ApplyColor", RpcTarget.All,
-            new Tuple<float, float, float>(randomColor.r, randomColor.g, randomColor.b));
+        photonView.RPC("ApplyColor", RpcTarget.All, randomColor);
         photonView.RPC("ApplyScale", RpcTarget.All, randomScaleV3);
     }
 
@@ -20,9 +19,9 @@ public class ObjectModifier : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void ApplyColor(Tuple<float, float, float> colorV3)
+    public void ApplyColor(Color randomColor)
     {
         Renderer renderer = GetComponent<MeshRenderer>();
-        renderer.material.color = new Color(colorV3.Item1, colorV3.Item2, colorV3.Item3);
+        renderer.material.color = randomColor;
     }
 }
