@@ -9,7 +9,7 @@ public class ColorType
 
     public static object Deserialize(byte[] data)
     {
-        var result = new ColorType();
+        var result = new Color();
         result.r = data[0];
         result.g = data[1];
         result.b = data[2];
@@ -21,10 +21,5 @@ public class ColorType
     {
         var color = (Color)customType;
         return new byte[] { (byte)(color.r * 255), (byte)(color.g * 255), (byte)(color.b * 255), (byte)(color.a * 255) };
-    }
-
-    public Color ToColor()
-    {
-        return new Color(r / 255f, g / 255f, b / 255f, a / 255f);
     }
 }
