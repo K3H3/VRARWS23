@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class BlockController : MonoBehaviour
@@ -23,24 +24,24 @@ public class BlockController : MonoBehaviour
         GameObject selectedPrefab = blocks[randomIndex];
 
         // Instantiate the selected prefab at the target position
-        GameObject spawnedObject = Instantiate(selectedPrefab, target.position, Quaternion.identity);
+        PhotonNetwork.Instantiate(selectedPrefab.name, target.position, Quaternion.identity);
 
-        // Configure the scale of the spawned object within the specified range
-        float randomScaleX = Random.Range(minScale, maxScale);
-        float randomScaleY = Random.Range(minScale, maxScale);
-        float randomScaleZ = Random.Range(minScale, maxScale);
-        spawnedObject.transform.localScale = new Vector3(randomScaleX, randomScaleY, randomScaleZ);
+        //// Configure the scale of the spawned object within the specified range
+        //float randomScaleX = Random.Range(minScale, maxScale);
+        //float randomScaleY = Random.Range(minScale, maxScale);
+        //float randomScaleZ = Random.Range(minScale, maxScale);
+        //spawnedObject.transform.localScale = new Vector3(randomScaleX, randomScaleY, randomScaleZ);
 
-        // Configure the color of the spawned object within the specified range
-        Color randomColor = new Color(Random.value, Random.value, Random.value);
+        //// Configure the color of the spawned object within the specified range
+        //Color randomColor = new Color(Random.value, Random.value, Random.value);
 
-        Renderer renderer = spawnedObject.GetComponent<MeshRenderer>();
-        if (renderer is null)
-        {
-            Debug.LogWarning("The spawned object does not have a Renderer component.");
-            return;
-        }
+        //Renderer renderer = spawnedObject.GetComponent<MeshRenderer>();
+        //if (renderer is null)
+        //{
+        //    Debug.LogWarning("The spawned object does not have a Renderer component.");
+        //    return;
+        //}
 
-        renderer.material.color = randomColor;
+        //renderer.material.color = randomColor;
     }
 }
