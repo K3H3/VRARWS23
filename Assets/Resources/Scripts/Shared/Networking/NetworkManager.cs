@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
-    // Start is called before the first frame update
     void Start()
     {
         ConnectToServer();
@@ -14,14 +11,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void ConnectToServer()
     {
-        PhotonNetwork.ConnectUsingSettings();
         Debug.Log("Try Connect To Server...");
+        PhotonNetwork.ConnectUsingSettings();
     }
 
     public override void OnConnectedToMaster()
     {
         base.OnConnectedToMaster();
         Debug.Log("Connected To Server");
+
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 10;
         roomOptions.IsVisible = true;
@@ -38,7 +36,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log("New Player joined Room");
         base.OnPlayerEnteredRoom(newPlayer);
+        Debug.Log("New Player joined Room");
     }
 }

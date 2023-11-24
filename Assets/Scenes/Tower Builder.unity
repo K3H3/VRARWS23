@@ -2656,6 +2656,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3621981465926922692, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621981465926922692, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621981465926922694, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+      propertyPath: m_Name
+      value: Left Hand Presence
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621981465926922695, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+      propertyPath: showController
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621981466897926562, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621981466897926562, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9146974285355630436, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
       propertyPath: m_Name
       value: '[XR SETUP]'
