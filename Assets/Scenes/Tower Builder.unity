@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14167528, g: 0.32541344, b: 0.36627227, a: 1}
+  m_IndirectSpecularColor: {r: 0.14162312, g: 0.3253057, b: 0.3661156, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1009,6 +1009,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4406774524442619186, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
+      propertyPath: OwnershipTransfer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
 --- !u!114 &520520084 stripped
@@ -1016,7 +1020,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2080150656520924452, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
   m_PrefabInstance: {fileID: 520520083}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1079943133}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed98ef0aac31d9b46b62da903b8b4bbb, type: 3}
@@ -2320,6 +2324,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ac114d285df706248af2741b6f52e646, type: 3}
   m_PrefabInstance: {fileID: 1052948035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1079943133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 959022412404836885, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
+  m_PrefabInstance: {fileID: 520520083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1079943135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4406774524442619186, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
+  m_PrefabInstance: {fileID: 520520083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079943133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1079943139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079943133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b20ff4b7e269bb4aaab0abca24233b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1111267373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5059,8 +5091,36 @@ PrefabInstance:
       value: Car Button
       objectReference: {fileID: 0}
     - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 520520084}
+    - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1079943135}
+    - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RequestOwnership
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Photon.Pun.PhotonView, PhotonUnityNetworking
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766662457674793686, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16c49e97a75834861a4f0f5e087591b1, type: 3}

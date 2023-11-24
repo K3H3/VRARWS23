@@ -5,12 +5,10 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-    [Header("Spawn Settings")]
-    public GameObject[] blocks;
+    [Header("Spawn Settings")] public GameObject[] blocks;
     public Transform target;
 
-    [Header("Customization")]
-    public float minScale = 0.5f;
+    [Header("Customization")] public float minScale = 0.5f;
     public float maxScale = 2.0f;
 
     public void SpawnRandomObject()
@@ -26,14 +24,15 @@ public class BlockController : MonoBehaviour
         GameObject selectedPrefab = blocks[randomIndex];
 
         GameObject spawnedObject = PhotonNetwork.Instantiate(selectedPrefab.name, target.position, Quaternion.identity);
+
         Color randomColor = new Color(Random.value, Random.value, Random.value);
+
         float randomScaleX = Random.Range(minScale, maxScale);
         float randomScaleY = Random.Range(minScale, maxScale);
         float randomScaleZ = Random.Range(minScale, maxScale);
 
         Vector3 randomScaleV3 = new Vector3(randomScaleX, randomScaleY, randomScaleZ);
 
-        spawnedObject.GetComponent<ObjectModifier>().ApplyScale(randomScaleV3);
-        spawnedObject.GetComponent<ObjectModifier>().ApplyColor(randomColor);
+        spawnedObject.GetComponent<ObjectModifier>().ApplyModifiers(randomColor, randomScaleV3);
     }
 }
