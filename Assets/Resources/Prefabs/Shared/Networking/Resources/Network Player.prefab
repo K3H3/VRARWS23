@@ -2315,8 +2315,6 @@ MonoBehaviour:
   head: {fileID: 3970949818417514116}
   leftHand: {fileID: 2770040969088971227}
   rightHand: {fileID: 3446904370592886867}
-  leftHandAnimator: {fileID: 7900249432746015309}
-  rightHandAnimator: {fileID: 1714091223416144310}
   photonView: {fileID: 0}
 --- !u!1 &9221314927046863132
 GameObject:
