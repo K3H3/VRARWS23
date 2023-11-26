@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 4406774524442619186, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
 --- !u!114 &520520084 stripped
@@ -4702,7 +4706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7897657265378340308, guid: ed52fd82b121b4a43aeb2e0034f1394f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.778
+      value: -2.52
       objectReference: {fileID: 0}
     - target: {fileID: 7897657265378340308, guid: ed52fd82b121b4a43aeb2e0034f1394f, type: 3}
       propertyPath: m_LocalPosition.y
