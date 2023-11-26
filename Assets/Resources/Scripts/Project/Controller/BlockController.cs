@@ -21,13 +21,6 @@ public class BlockController : MonoBehaviour
         int randomIndex = Random.Range(0, blocks.Length);
         GameObject selectedPrefab = blocks[randomIndex];
 
-        GameObject spawnedObject = PhotonNetwork.Instantiate(selectedPrefab.name, target.position, Quaternion.identity);
-
-        float randomScaleX = Random.Range(minScale, maxScale);
-        float randomScaleY = Random.Range(minScale, maxScale);
-        float randomScaleZ = Random.Range(minScale, maxScale);
-        Vector3 randomScale = new Vector3(randomScaleX, randomScaleY, randomScaleZ);
-
-        spawnedObject.GetComponent<ObjectModifier>().ApplyModifiers(randomScale);
+        PhotonNetwork.Instantiate(selectedPrefab.name, target.position, Quaternion.identity);
     }
 }
