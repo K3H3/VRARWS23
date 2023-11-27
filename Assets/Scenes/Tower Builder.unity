@@ -1090,6 +1090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 959022412404836885, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 4406774524442619186, guid: c8b0ee0e3965acf4b9c9abc1cf684d17, type: 3}
       propertyPath: sceneViewId
       value: 1

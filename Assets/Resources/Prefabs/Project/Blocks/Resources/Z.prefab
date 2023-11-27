@@ -290,6 +290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7177699150408988530, guid: b16256270db3441de99c0b160d41883e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d25084b1c06604d4f862c2b5c8a92a4c, type: 2}
     - target: {fileID: 8828325162385852327, guid: b16256270db3441de99c0b160d41883e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -360,6 +364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7177699150408988530, guid: b16256270db3441de99c0b160d41883e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d25084b1c06604d4f862c2b5c8a92a4c, type: 2}
     - target: {fileID: 8828325162385852327, guid: b16256270db3441de99c0b160d41883e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -430,6 +438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7177699150408988530, guid: b16256270db3441de99c0b160d41883e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d25084b1c06604d4f862c2b5c8a92a4c, type: 2}
     - target: {fileID: 8828325162385852327, guid: b16256270db3441de99c0b160d41883e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -500,6 +512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7177699150408988530, guid: b16256270db3441de99c0b160d41883e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d25084b1c06604d4f862c2b5c8a92a4c, type: 2}
     - target: {fileID: 8828325162385852327, guid: b16256270db3441de99c0b160d41883e, type: 3}
       propertyPath: m_RootOrder
       value: 2
