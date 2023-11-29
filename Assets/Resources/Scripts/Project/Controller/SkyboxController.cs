@@ -5,6 +5,7 @@ public class SkyboxController : MonoBehaviour
     public Material daySkybox;
     public Material nightSkybox;
     public Material sunsetSkybox;
+    public Light sunLight;
 
     public void SetDaySkybox()
     {
@@ -21,4 +22,8 @@ public class SkyboxController : MonoBehaviour
         RenderSettings.skybox = sunsetSkybox;
     }
 
+    public void AdjustLighting(float lightIntensity)
+    {
+        sunLight.intensity = lightIntensity;
+    }
 }

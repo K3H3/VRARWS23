@@ -2696,10 +2696,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2099093160815968499, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
-      propertyPath: m_StartingHoverFilters.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5997043956428897012, guid: ee5b0c41e0b60a241a289a455377ed62, type: 3}
       propertyPath: m_Name
       value: '[XR SETUP]'
@@ -5660,6 +5656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[STATIC UI]'
       objectReference: {fileID: 0}
+    - target: {fileID: 3583788662806289280, guid: 217e09584bfd1437c93b99ec39680188, type: 3}
+      propertyPath: sunLight
+      value: 
+      objectReference: {fileID: 1668483497}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 217e09584bfd1437c93b99ec39680188, type: 3}
 --- !u!1001 &5673863282493592257
