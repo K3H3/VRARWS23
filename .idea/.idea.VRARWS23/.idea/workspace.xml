@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e2dcbb2f-ae92-43c1-975f-f60ecfc57341" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRARWS23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRARWS23/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/StaticUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/StaticUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skybox/Project/skybox.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skybox/Project/skybox.mat.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +120,8 @@
       <workItem from="1700861386732" duration="5355000" />
       <workItem from="1701115184150" duration="2015000" />
       <workItem from="1701191928084" duration="15000" />
+      <workItem from="1701191963955" duration="723000" />
+      <workItem from="1701251816958" duration="1574000" />
     </task>
     <servers />
   </component>
