@@ -6,7 +6,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public bool winningCondition = false;
-    
+
     // Settings
     [SerializeField] private float motorForce, breakForce;
 
@@ -23,10 +23,10 @@ public class CarController : MonoBehaviour
         if (winningCondition)
         {
             DestroyGameObjectWithTag("Pickup");
-            //confetti;
+            ActivateConfetti();
         }
     }
-    
+
     void DestroyGameObjectWithTag(string tag)
     {
         // Find all GameObjects with the specified tag
@@ -42,6 +42,23 @@ public class CarController : MonoBehaviour
                 Destroy(pickup, 3);
                 break; // Break out of the loop once the desired pickup is handled
             }
+        }
+    }
+
+    void ActivateConfetti()
+    {
+        // Find the GameObject with the ConfettiController script
+        ConfettiController confettiController = FindObjectOfType<ConfettiController>();
+
+        // Check if the ConfettiController script is found
+        if (confettiController != null)
+        {
+            // Start the confetti effect
+            confettiController.StartConfetti();
+        }
+        else
+        {
+            Debug.LogError("ConfettiController not found in the scene.");
         }
     }
 
@@ -81,14 +98,15 @@ public class CarController : MonoBehaviour
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
     }
+
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("FinishLine"))
         {
             return;
         }
+
         winningCondition = true;
         Debug.Log("Winning Condition: " + winningCondition);
     }
-
 }
