@@ -22,8 +22,26 @@ public class CarController : MonoBehaviour
     {
         if (winningCondition)
         {
-            despawn pickup;
-            confetti;
+            DestroyGameObjectWithTag("Pickup");
+            //confetti;
+        }
+    }
+    
+    void DestroyGameObjectWithTag(string tag)
+    {
+        // Find all GameObjects with the specified tag
+        GameObject[] pickups = GameObject.FindGameObjectsWithTag(tag);
+
+        // Loop through each pickup and destroy or disable it
+        foreach (GameObject pickup in pickups)
+        {
+            // Check if the current pickup is the one calling the script
+            if (pickup == gameObject)
+            {
+                // Destroy or disable the pickup
+                Destroy(pickup, 3);
+                break; // Break out of the loop once the desired pickup is handled
+            }
         }
     }
 
