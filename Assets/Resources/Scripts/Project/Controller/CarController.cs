@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    public bool winningCondition = false;
+    
     // Settings
     [SerializeField] private float motorForce, breakForce;
 
@@ -16,6 +18,14 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
 
+    public void Update()
+    {
+        if (winningCondition)
+        {
+            despawn pickup;
+            confetti;
+        }
+    }
 
     public void Move(float input)
     {
@@ -53,4 +63,14 @@ public class CarController : MonoBehaviour
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("FinishLine"))
+        {
+            return;
+        }
+        winningCondition = true;
+        Debug.Log("Winning Condition: " + winningCondition);
+    }
+
 }

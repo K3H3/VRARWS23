@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public float magnitude = 100.0f;
     private float _startTime;
     public Text timeText;
+    
 
     private Vector3 direction = new Vector3(-1, 0, 0);
 
@@ -49,4 +50,6 @@ public class GameController : MonoBehaviour
 
         rb.AddForce(direction.normalized * magnitude, ForceMode.Acceleration);
     }
+    
+
 }

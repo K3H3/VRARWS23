@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e2dcbb2f-ae92-43c1-975f-f60ecfc57341" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRARWS23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRARWS23/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/StaticUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/StaticUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skybox/Project/skybox.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skybox/Project/skybox.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Shared/finish_line_10_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/Shared/finish_line_10_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Shared/finish_line_1_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/Shared/finish_line_1_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/Finish Line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/Finish Line.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/Finish Line.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Project/Finish Line.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Project/Controller/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Project/Controller/CarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Project/Controller/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Project/Controller/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +23,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Shared/Networking/NetworkObjectSync.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.5.2/Runtime/AffordanceSystem/Receiver/Rendering/ColorMaterialPropertyAffordanceReceiver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.5.2/Runtime/AffordanceSystem/Receiver/Rendering/FloatMaterialPropertyAffordanceReceiver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.5.2/Runtime/Locomotion/LocomotionSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../VR_UE2_Hessdoerfer/Assets/Resources/Scripts/Assignment2/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -122,6 +127,7 @@
       <workItem from="1701191928084" duration="15000" />
       <workItem from="1701191963955" duration="723000" />
       <workItem from="1701251816958" duration="1574000" />
+      <workItem from="1702287137146" duration="2379000" />
     </task>
     <servers />
   </component>
