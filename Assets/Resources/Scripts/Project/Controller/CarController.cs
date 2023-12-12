@@ -24,6 +24,8 @@ public class CarController : MonoBehaviour
         {
             DestroyGameObjectWithTag("Pickup");
             ActivateConfetti();
+            //deactivate condition to safe resources
+            winningCondition = !winningCondition;
         }
     }
 
@@ -105,8 +107,6 @@ public class CarController : MonoBehaviour
         {
             return;
         }
-
         winningCondition = true;
-        Debug.Log("Winning Condition: " + winningCondition);
     }
 }

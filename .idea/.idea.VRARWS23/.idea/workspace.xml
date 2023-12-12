@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e2dcbb2f-ae92-43c1-975f-f60ecfc57341" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRARWS23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRARWS23/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Project/Controller/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Project/Controller/CarController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <workItem from="1701191928084" duration="15000" />
       <workItem from="1701191963955" duration="723000" />
       <workItem from="1701251816958" duration="1574000" />
-      <workItem from="1702287137146" duration="3688000" />
+      <workItem from="1702287137146" duration="4357000" />
     </task>
     <servers />
   </component>
