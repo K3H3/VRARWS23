@@ -2186,6 +2186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed98ef0aac31d9b46b62da903b8b4bbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winningCondition: 0
   motorForce: 1000
   breakForce: 3000
   frontLeftWheelCollider: {fileID: 9154755683927349000}

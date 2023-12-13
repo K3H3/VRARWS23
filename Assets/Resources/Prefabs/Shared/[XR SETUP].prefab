@@ -1934,6 +1934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1544918368017004644}
   - component: {fileID: 1034010499995115105}
+  - component: {fileID: 1798718620}
   m_Layer: 2
   m_Name: Locomotion System
   m_TagString: Untagged
@@ -1971,6 +1972,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 6558853441220502706}
+--- !u!114 &1798718620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979312083848981738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 1034010499995115105}
+  m_TurnAmount: 45
+  m_DebounceTime: 0.5
+  m_EnableTurnLeftRight: 1
+  m_EnableTurnAround: 1
+  m_DelayTime: 0
+  m_LeftHandSnapTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 5a472875-2397-4503-a127-a64934303f65
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -7374733323251553461, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_RightHandSnapTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Snap Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 68ebb536-cf4f-4a19-b1c8-d3b483639b84
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &4373489555136765972
 GameObject:
   m_ObjectHideFlags: 0
@@ -5423,7 +5466,6 @@ MonoBehaviour:
   - {fileID: 4312000459365013683, guid: b6e90dd78d95b4d01870d22cd3900635, type: 3}
   - {fileID: 4312000459365013683, guid: 1a6fdbefe27a84a24ae7b06da803289d, type: 3}
   - {fileID: 3656647933074046966, guid: 93609f1a5fbae4ba7a46e4701232d892, type: 3}
-  - {fileID: 1187689189580861176, guid: be7d73fdfdea14d379c0d85c663879db, type: 3}
   - {fileID: 1187689189580861176, guid: 215c0d8da7fee4412aec1f573ff59d15, type: 3}
   - {fileID: 3656647933074046966, guid: 6a3b620a61a774b86841bd4d8bcfdf50, type: 3}
   - {fileID: 1187689189580861176, guid: 41caad6622bac4d66aa51780fc184093, type: 3}
