@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ca343c3-a650-4b92-9fd0-364e51b10ea0" name="Changes" comment="" />
+    <list default="true" id="0ca343c3-a650-4b92-9fd0-364e51b10ea0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRTowerBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRTowerBuilder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tower Builder.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tower Builder.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2azr9B6uW9pUY5HzVISH8uvg4kA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,6 +30,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -81,6 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705332096021</updated>
       <workItem from="1705332099475" duration="22000" />
+      <workItem from="1706606127082" duration="728000" />
     </task>
     <servers />
   </component>

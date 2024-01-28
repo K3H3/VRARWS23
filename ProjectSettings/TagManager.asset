@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pickup
   - FinishLine
+  - Block
   layers:
   - Default
   - TransparentFX
